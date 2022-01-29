@@ -1,0 +1,21 @@
+<div>
+  <!-- itinera el array de cars-->
+  <!-- se actualiza solo al modificarse el array-->
+    <H1>Autos ingresados</H1>
+    <div *ngFor="let car of cars; let i=index">  
+      We have a {{car.make}} {{car.model}} with a mileage of {{car.miles}} 
+    </div>
+  </div>
+  <br>
+  
+  <!-- ejecuta metodo addCarTesla-->
+  <button (click)="addCarTesla()">agregar tesla</button>
+
+  <br>  <br>
+  <!-- crea un formulario de input-->
+  <div>
+    <input [(ngModel)]="make" placeholder="make">
+    <input [(ngModel)]="model" placeholder="model">
+    <input type="number" [(ngModel)]="miles" placeholder="miles">
+  </div>
+  <button (click)="addCar()">agregar auto</button>
